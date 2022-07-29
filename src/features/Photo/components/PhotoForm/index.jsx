@@ -11,7 +11,6 @@ function PhotoForm(props) {
 
   const validationSchema = Yup.object().shape({
     title: Yup.string().required('This field is required'),
-    category: Yup.string().required('This field is required'),
   });
   return (
     <Formik
@@ -20,7 +19,7 @@ function PhotoForm(props) {
       onSubmit={props.onSubmit}
     >
       {(formikProps) => {
-        const { values, errors, touched } = formikProps;
+        const { values } = formikProps;
         return (
           <Form>
             <FastField

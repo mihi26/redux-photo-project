@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import {Col, Container, Row} from 'reactstrap' ;
-import "./Header.scss";
+import { Col, Container, Row } from 'reactstrap';
+import './Header.scss';
 
 function Header(props) {
   return (
@@ -10,7 +10,7 @@ function Header(props) {
         <Row className="justify-content-between">
           <Col xs="auto">
             <a className="header__link header__title" href="/">
-              Made By MiHi
+              Redux Photo App
             </a>
           </Col>
           <Col xs="auto">
@@ -19,9 +19,7 @@ function Header(props) {
             </NavLink>
           </Col>
         </Row>
-
       </Container>
-
     </header>
   );
 }

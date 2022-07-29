@@ -6,8 +6,6 @@ import { addPhoto, editPhoto } from 'features/Photo/photoSlice';
 import { useNavigate, useParams } from 'react-router-dom';
 import { PHOTO_CATEGORY_OPTIONS } from 'constants/photo_category';
 
-AddEditPage.propTypes = {};
-
 function AddEditPage(props) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
