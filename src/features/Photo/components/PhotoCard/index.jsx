@@ -16,7 +16,7 @@ function PhotoCard(props) {
     <div className="photo">
       <img
         className="img-fluid"
-        src={`https://robohash.org/bgset_bg1/set_set${photo.imageURL.setID}/${photo.imageURL.randomID}?size=300x300`}
+        src={`https://robohash.org/bgset_bg1/set_set${photo.imageURL.setID}/${photo.imageURL.randomID}?size=200x200`}
         alt={photo.title}
       />
 
