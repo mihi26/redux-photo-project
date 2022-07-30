@@ -7,14 +7,16 @@ function SelectField(props) {
   const { name } = field;
 
   return (
-    <FormGroup>
-      {label && <Label for={name}>Category</Label>}
-      <Input id={name} name={name} type={type} {...field}>
-        {PHOTO_CATEGORY_OPTIONS.map((category, index) => {
-          return <option key={index}>{category.label}</option>;
-        })}
-      </Input>
-    </FormGroup>
+    <div className="">
+      <FormGroup>
+        {label && <Label for={name}>Category</Label>}
+        <Input id={name} name={name} type={type} {...field}>
+          {PHOTO_CATEGORY_OPTIONS.map((category, index) => {
+            return <option key={index}>{category.label}</option>;
+          })}
+        </Input>
+      </FormGroup>
+    </div>
   );
 }
 

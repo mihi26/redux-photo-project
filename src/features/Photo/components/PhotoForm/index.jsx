@@ -37,7 +37,7 @@ function PhotoForm(props) {
               label="Photo"
               category={values.category}
             />
-            <FormGroup>
+            <FormGroup className="d-flex justify-content-between">
               <Button color="primary" type="submit">
                 {isAdd ? 'Add to album' : 'Update your photo'}
               </Button>

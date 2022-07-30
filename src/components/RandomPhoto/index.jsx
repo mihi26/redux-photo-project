@@ -3,7 +3,7 @@ import './RandomPhoto.scss';
 import { Button } from 'reactstrap';
 
 function RandomPhoto(props) {
-  const { name, imageURL, onImageURLChange, onRandomButtonBlur, set } = props;
+  const { name, imageURL, onImageURLChange, set } = props;
   const getRandomImageUrl = () => {
     let randomID = '';
     let setID = '1';
@@ -38,20 +38,14 @@ function RandomPhoto(props) {
   return (
     <div className="random-photo">
       <div className="random-photo__button">
-        <Button
-          outline
-          name={name}
-          color="primary"
-          onClick={handleOnClick}
-          onBlur={onRandomButtonBlur}
-        >
+        <Button name={name} color="primary" onClick={handleOnClick}>
           Random photo
         </Button>
       </div>
       <div className="random-photo__photo">
         {imageURL && (
           <img
-            src={`https://robohash.org/bgset_bg1/set_set${imageURL.setID}/${imageURL.randomID}?size=300x300`}
+            src={`https://robohash.org/bgset_bg1/set_set${imageURL.setID}/${imageURL.randomID}?size=200x200`}
             alt="Error please click random button again"
           />
         )}
