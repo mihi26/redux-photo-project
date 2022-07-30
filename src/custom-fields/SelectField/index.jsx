@@ -3,8 +3,8 @@ import { FormGroup, Input, Label } from 'reactstrap';
 import { PHOTO_CATEGORY_OPTIONS } from 'constants/photo_category';
 
 function SelectField(props) {
-  const { field, form, label, type } = props;
-  const { name, value, onChange, onBlur } = field;
+  const { field, label, type } = props;
+  const { name } = field;
 
   return (
     <FormGroup>

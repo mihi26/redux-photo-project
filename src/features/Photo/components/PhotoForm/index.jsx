@@ -5,6 +5,7 @@ import { Formik, Form, FastField, Field } from 'formik';
 import InputField from 'custom-fields/InputField';
 import SelectField from 'custom-fields/SelectField';
 import RandomPhotoField from 'custom-fields/RandomPhotoField';
+import { Link } from 'react-router-dom';
 
 function PhotoForm(props) {
   const { initialValues, isAdd } = props;
@@ -26,7 +27,7 @@ function PhotoForm(props) {
               name="title"
               component={InputField}
               label="Title"
-              placeholder="Eg: My house"
+              placeholder="Eg: My robot"
               type="text"
             />
             <Field name="category" component={SelectField} label="Category" type="select" />
@@ -40,6 +41,9 @@ function PhotoForm(props) {
               <Button color="primary" type="submit">
                 {isAdd ? 'Add to album' : 'Update your photo'}
               </Button>
+              <Link to={'/photos'}>
+                <Button color="danger">Back</Button>
+              </Link>
             </FormGroup>
           </Form>
         );

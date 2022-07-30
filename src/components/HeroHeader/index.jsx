@@ -10,7 +10,7 @@ function HeroHeader() {
           This is a platform that helps you create your own beautiful album with random generated
           photos in minutes. Sign up for free.
         </p>
-        <Link to="/sign-in">
+        <Link to="/photos">
           <button className="hero-header__btn btn">Get started now</button>
         </Link>
       </div>

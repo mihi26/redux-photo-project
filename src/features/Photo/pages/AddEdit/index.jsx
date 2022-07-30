@@ -2,7 +2,7 @@ import React from 'react';
 import PhotoForm from 'features/Photo/components/PhotoForm';
 import './AddEdit.scss';
 import { useDispatch, useSelector } from 'react-redux';
-import { addPhoto, editPhoto } from 'features/Photo/photoSlice';
+import { addLocalMiddleware, editLocalMiddleware } from 'features/Photo/photoSlice';
 import { useNavigate, useParams } from 'react-router-dom';
 import { PHOTO_CATEGORY_OPTIONS } from 'constants/photo_category';
 
@@ -28,11 +28,9 @@ function AddEditPage(props) {
         ...values,
         id: values.imageURL.setID + '_' + values.imageURL.randomID,
       };
-      const action = addPhoto(newPhoto);
-      dispatch(action);
+      dispatch(addLocalMiddleware(newPhoto));
     } else {
-      const action = editPhoto(values);
-      dispatch(action);
+      dispatch(editLocalMiddleware(values));
     }
     navigate('/photos');
   };

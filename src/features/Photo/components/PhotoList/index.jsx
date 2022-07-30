@@ -4,7 +4,6 @@ import PhotoCard from '../PhotoCard';
 
 function PhotoList(props) {
   const { photoList, onPhotoEditClick, onPhotoRemoveClick } = props;
-
   return (
     <Row>
       {photoList.map((photo, index) => (

@@ -8,16 +8,16 @@ function RandomPhoto(props) {
     let randomID = '';
     let setID = '1';
     switch (set) {
-      case 'Monsters':
+      case 'Monster':
         setID = '2';
         break;
-      case 'Robots Head':
+      case 'Robot Head':
         setID = '3';
         break;
-      case 'Kittens':
+      case 'Kitten':
         setID = '4';
         break;
-      case 'Humans':
+      case 'Human':
         setID = '5';
         break;
       default:

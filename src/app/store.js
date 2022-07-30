@@ -5,6 +5,7 @@ const rootReducer = {
 };
 const store = configureStore({
   reducer: rootReducer,
+  // middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(localMiddleware),
 });
 
 export default store;

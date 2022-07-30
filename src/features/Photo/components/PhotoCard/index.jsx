@@ -4,7 +4,6 @@ import './PhotoCard.scss';
 
 function PhotoCard(props) {
   const { photo, onEditClick, onRemoveClick } = props;
-
   const handleEditClick = () => {
     if (onEditClick) onEditClick(photo);
   };
