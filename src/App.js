@@ -18,7 +18,7 @@ function App() {
           <Route path={`:photoId`} element={<AddEditPage />} />
         </Route>
         {/* <Route exact path="/sign-in" element={<SignIn />} /> */}
-        <Route element={<NotFound />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </React.Fragment>
   );
